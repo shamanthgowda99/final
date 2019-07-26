@@ -1,0 +1,21 @@
+message=input("enter the message:")
+alpha='abcdefghijklmnopqrstuvwxyz'
+key=5
+encrypt=''
+decrypt=''
+for i in message:
+    pos=alpha.find(i)
+    new=(pos+5)%26
+    encrypt+=alpha[new]
+print(encrypt)
+for i in encrypt:
+    pos1=alpha.find(i)
+    new1=(pos1-5)%26
+    decrypt+=alpha[new1]
+#print(decrypt)
+
+file=open('E:\chaitanya/enc.txt','a')
+file.write(decrypt)
+file.close()
+
+
